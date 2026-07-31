@@ -7,7 +7,7 @@ import Gallery from './pages/Gallery/Gallery';
 import Contact from './pages/Contact/Contact';
 
 import useLenis from './lib/useLenis';
-import Notfound from './pages/NotFound/Notfound';
+import NotFound from './pages/NotFound/NotFound';
 
 // function NotFound() {
 //   return (
@@ -29,7 +29,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Notfound />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
