@@ -89,7 +89,7 @@
 }
 
 .header__logo img {
-  height: 52px;
+  height: 60px;
   width: auto;
 }
 
@@ -104,7 +104,7 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-white);
+  /* color: var(--color-white); */
   position: relative;
   padding-bottom: 6px;
   transition: color 0.3s var(--ease);
@@ -147,7 +147,7 @@
 
 .header__burger {
   display: none;
-  color: var(--color-white);
+  color: var(--color-black);
   transition: color 0.3s var(--ease);
 }
 

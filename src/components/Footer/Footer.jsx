@@ -107,7 +107,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="footer__col">
+        {/* <div className="footer__col">
           <h4>Newsletter</h4>
           <p>Subscribe to get our latest updates and offers.</p>
           <form className="footer__newsletter" onSubmit={handleSubscribe}>
@@ -125,13 +125,13 @@ export default function Footer() {
             </button>
           </form>
           {subscribed && <p className="footer__subscribed">Thank you for subscribing!</p>}
-        </div>
+        </div> */}
       </div>
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <p>&copy; {new Date().getFullYear()} Kolonia Polonia Hair Studio. All Rights Reserved.</p>
-          <p>Designed with <span className="footer__heart">&hearts;</span> for Beauty &amp; Confidence</p>
+          <p>Crafted with <span className="footer-heart">&hearts;</span> for Beauty &amp; Confidence by <a href="https://adithyanskumar.netlify.app" target="_blank" rel="noopener noreferrer">Adithyan</a></p>
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Phone, Clock, MessageCircle, MapPin, Menu, X, Calendar } from 'lucide-react';
 import logo from '../../assets/images/logo.png';
+import logowhite from '../../assets/images/logo-white.png';
 import './Header.css';
 
 // lucide-react no longer ships brand/logo icons, so Facebook and
@@ -137,7 +138,7 @@ export default function Header() {
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="mobile-menu__top">
-                <img src={logo} alt="Kolonia Polonia Hair Studio logo" className="mobile-menu__logo" />
+                <img src={logowhite} alt="Kolonia Polonia Hair Studio logo" className="mobile-menu__logo" />
                 <button type="button" aria-label="Close menu" onClick={() => setMenuOpen(false)}>
                   <X size={26} />
                 </button>
@@ -163,7 +164,7 @@ export default function Header() {
                 ))}
               </ul>
 
-              <NavLink to="/contact" className="btn btn-primary mobile-menu__cta" onClick={() => setMenuOpen(false)}>
+              <NavLink to="/contact" className="btn btn-white" onClick={() => setMenuOpen(false)}>
                 <Calendar size={15} strokeWidth={2} />
                 Book Appointment
               </NavLink>
