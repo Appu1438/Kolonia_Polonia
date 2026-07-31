@@ -1,0 +1,242 @@
+.topbar {
+  position: relative;
+  z-index: 61;
+  background: var(--color-black);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  transition: margin-top 0.35s var(--ease), opacity 0.35s var(--ease);
+}
+
+.topbar--hidden {
+  margin-top: -36px;
+  opacity: 0;
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+}
+
+.topbar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topbar__item--location {
+  color: var(--color-white);
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.topbar__socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar__socials a {
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  transition: color 0.25s var(--ease);
+}
+
+.topbar__socials a:hover {
+  color: var(--color-red);
+}
+
+@media (max-width: 860px) {
+  .topbar { display: none; }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.4s var(--ease), border-color 0.4s var(--ease), backdrop-filter 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.header--glass {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-bottom-color: rgba(10, 10, 10, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.header--glass .header__nav a {
+  color: var(--color-black);
+}
+
+.header--glass .header__burger {
+  color: var(--color-black);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+
+.header__logo img {
+  height: 52px;
+  width: auto;
+}
+
+.header__nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__nav a {
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s var(--ease);
+}
+
+.header--glass .header__nav a {
+  color: var(--color-black-soft);
+}
+
+.header__nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-red);
+  transition: width 0.35s var(--ease);
+}
+
+.header__nav a:hover,
+.header__nav a.active {
+  color: var(--color-red);
+}
+
+.header__nav a:hover::after,
+.header__nav a.active::after {
+  width: 100%;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__cta {
+  padding: 14px 26px;
+}
+
+.header__burger {
+  display: none;
+  color: var(--color-white);
+  transition: color 0.3s var(--ease);
+}
+
+@media (max-width: 960px) {
+  .header__nav { display: none; }
+  .header__cta { display: none; }
+  .header__burger { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .header__logo img { height: 42px; }
+}
+
+/* Mobile menu overlay */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(10, 10, 10, 0.55);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu__panel {
+  width: min(360px, 88vw);
+  height: 100%;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 28px 30px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.mobile-menu__logo {
+  height: 44px;
+}
+
+.mobile-menu__top button {
+  color: var(--color-white);
+}
+
+.mobile-menu__links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.mobile-menu__links a {
+  display: block;
+  padding: 14px 0;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--color-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.3s var(--ease), padding-left 0.3s var(--ease);
+}
+
+.mobile-menu__links a:hover,
+.mobile-menu__links a.active {
+  color: var(--color-red);
+  padding-left: 8px;
+}
+
+.mobile-menu__cta {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.mobile-menu__contact {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.mobile-menu__contact p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.75);
+}
