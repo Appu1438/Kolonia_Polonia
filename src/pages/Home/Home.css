@@ -308,7 +308,7 @@ HERO===========================================*/
 .home-about__quote {
   position: absolute;
   left: 20px;
-  bottom: -22px;
+  bottom: -15px;
   background: var(--color-white);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
   padding: 16px 22px;

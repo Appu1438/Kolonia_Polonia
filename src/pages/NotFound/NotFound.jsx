@@ -15,9 +15,11 @@ export default function NotFound() {
   return (
     <>
       <SEO
-        title="Page Not Found"
-        description="The page you're looking for doesn't exist. Return to Kolonia Polonia Hair Studio to explore our services, gallery and booking."
+        title="404 - Page Not Found"
+        description="The page you are looking for could not be found. Return to Kolonia Polonia Hair Studio to explore our premium hair, beauty, spa and grooming services in Alappuzha, Kerala."
+        keywords="404, page not found, Kolonia Polonia Hair Studio"
         path="/404"
+        noindex
       />
 
       <section className="notfound">

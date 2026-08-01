@@ -49,9 +49,9 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="Services"
-        description="Explore Kolonia Polonia Hair Studio's full menu: haircuts, hair color, hair spa, beard grooming, facials, body massage, nails, threading, waxing and bridal makeup in Alappuzha."
-        keywords="salon services Alappuzha, bridal makeup, hair spa, facial, threading, nail art, beard grooming"
+        title="Hair, Beauty & Spa Services in Alappuzha | Kolonia Polonia Hair Studio"
+        description="Discover premium salon services at Kolonia Polonia Hair Studio in Alappuzha. From precision haircuts, hair styling and hair colouring to bridal makeup, facials, spa therapies, manicure, pedicure, threading, waxing, beard grooming and complete beauty care for men and women."
+        keywords="hair salon services Alappuzha, beauty salon Alappuzha, spa services Alappuzha, haircut Alappuzha, hair styling, hair colouring, hair spa, keratin treatment, smoothening, bridal makeup Alappuzha, groom makeup, facial, manicure, pedicure, nail art, threading, waxing, beard grooming, luxury salon Kerala, unisex salon Alappuzha"
         path="/services"
       />
 

@@ -36,9 +36,9 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About Us"
-        description="Meet Biju Polonia, founder and chief stylist of Kolonia Polonia Hair Studio. 15+ years of expertise delivering personalized hair, beauty and grooming experiences in Alappuzha."
-        keywords="Biju Polonia, salon founder Alappuzha, hair studio about, best stylist Kerala"
+        title="About Kolonia Polonia Hair Studio | Luxury Salon in Alappuzha"
+        description="Discover the story of Kolonia Polonia Hair Studio, founded by renowned hairstylist Biju Polonia. With years of expertise in hair styling, beauty, grooming, bridal makeovers and wellness, we are committed to delivering premium salon experiences for men and women across our Alappuzha branches."
+        keywords="About Kolonia Polonia Hair Studio, Biju Polonia, best hairstylist Alappuzha, salon founder Kerala, luxury salon Alappuzha, professional hairstylist Kerala, beauty salon Alappuzha, hair studio Kerala, bridal makeup expert Alappuzha, premium salon Kerala, unisex salon Alappuzha"
         path="/about"
       />
 

@@ -39,9 +39,9 @@ const SERVICES = [
 ];
 
 const BRANCHES = [
-  { tag: 'Main Branch', name: 'Alappuzha', address: 'Near Dummy Road, Alappuzha, Kerala \u2013 688001', image: IMG.branchInterior1 },
-  { tag: 'Branch 2', name: 'Alappuzha North', address: 'Near Dummy Junction, Alappuzha, Kerala \u2013 688002', image: IMG.branchInterior2 },
-  { tag: 'Branch 3', name: 'Cherthala', address: 'Near Dummy Bypass, Cherthala, Kerala \u2013 688524', image: IMG.branchInterior3 },
+  { tag: 'Main Branch', name: 'Alappuzha', address: 'Near Hospital Jn. Municipal Stadium Ward, Vellakkinar, Alappuzha, Kerala \u2013 688001', phone: '98472 21919', image: IMG.branchInterior1 },
+  { tag: 'Branch 2', name: 'Thondankulangara', address: 'G85Q+2XH, Thondankulangara, Thathampally, Alappuzha, Kerala \u2013 688013', phone: '98472 21919', image: IMG.branchInterior2 },
+  { tag: 'Branch 3', name: 'Arattuvazhy', address: 'Coming Soon', phone: '98472 21919', image: IMG.branchInterior3 },
 ];
 
 const WHY_US = [
@@ -56,9 +56,9 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Home"
-        description="Kolonia Polonia Hair Studio is a premium salon in Alappuzha, Kerala offering haircuts, hair color, bridal makeup, spa, nails, threading and grooming for men & women."
-        keywords="salon Alappuzha, hair studio Kerala, bridal makeup Alappuzha, spa Alappuzha, best salon Kerala"
+        title="Premium Hair & Beauty Salon in Alappuzha, Kerala"
+        description="Experience luxury beauty and grooming at Kolonia Polonia Hair Studio in Alappuzha, Kerala. We offer professional haircuts, hair styling, hair colouring, bridal makeup, spa therapies, facials, manicure, pedicure, threading, grooming and complete beauty care for men and women across our multiple branches."
+        keywords="Kolonia Polonia Hair Studio, salon in Alappuzha, best salon in Alappuzha, beauty salon Kerala, hair salon Alappuzha, hair cutting, hair styling, hair colouring, bridal makeup, groom makeup, spa in Alappuzha, facial, manicure, pedicure, threading, hair spa, luxury salon Kerala, unisex salon Alappuzha, beauty parlour Alappuzha"
         path="/"
       />
 

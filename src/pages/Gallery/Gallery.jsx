@@ -57,9 +57,9 @@ export default function Gallery() {
   return (
     <>
       <SEO
-        title="Gallery"
-        description="Browse real transformations from Kolonia Polonia Hair Studio: haircuts, hair color, bridal makeup, beard grooming, spa and nail art in Alappuzha, Kerala."
-        keywords="salon gallery Alappuzha, hairstyle photos, bridal makeup gallery, before after salon"
+        title="Salon Gallery | Hair, Bridal Makeup & Beauty Transformations in Alappuzha"
+        description="Explore the Kolonia Polonia Hair Studio gallery featuring stunning hair transformations, bridal makeovers, hair colouring, grooming, spa treatments, nail art and beauty services. See the quality and craftsmanship behind every look created at our premium salon in Alappuzha, Kerala."
+        keywords="Kolonia Polonia gallery, salon gallery Alappuzha, hair transformation Alappuzha, hairstyle gallery Kerala, bridal makeup gallery Alappuzha, hair colouring results, salon makeover, beard grooming gallery, nail art gallery, spa gallery, beauty salon photos, luxury salon Alappuzha, hair styling gallery, before and after salon"
         path="/gallery"
       />
 

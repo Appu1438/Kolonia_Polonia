@@ -8,12 +8,12 @@ import './Contact.css';
 import { motion } from 'framer-motion';
 
 const BRANCHES = [
-  { tag: 'Main Branch', name: 'Alappuzha', address: 'Near Dummy Road, Alappuzha, Kerala \u2013 688001', phone: '98472 21919', image: IMG.branchInterior1 },
-  { tag: 'Branch 2', name: 'Alappuzha North', address: 'Near Dummy Junction, Alappuzha, Kerala \u2013 688002', phone: '98472 21919', image: IMG.branchInterior2 },
-  { tag: 'Branch 3', name: 'Cherthala', address: 'Near Dummy Bypass, Cherthala, Kerala \u2013 688524', phone: '98472 21919', image: IMG.branchInterior3 },
+  { tag: 'Main Branch', name: 'Alappuzha', address: 'Near Hospital Jn. Municipal Stadium Ward, Vellakkinar, Alappuzha, Kerala \u2013 688001', phone: '98472 21919', image: IMG.branchInterior1 },
+  { tag: 'Branch 2', name: 'Thondankulangara', address: 'G85Q+2XH, Thondankulangara, Thathampally, Alappuzha, Kerala \u2013 688013', phone: '98472 21919', image: IMG.branchInterior2 },
+  { tag: 'Branch 3', name: 'Arattuvazhy', address: 'Coming Soon', phone: '98472 21919', image: IMG.branchInterior3 },
 ];
 
-const INITIAL_FORM = { name: '', phone: '', email: '', subject: '', message: '' };
+const INITIAL_FORM = { name: '', phone: '', email: '', service: '', message: '' };
 
 export default function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
@@ -35,28 +35,67 @@ export default function Contact() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       next.email = 'Please enter a valid email address.';
     }
+    if (!form.service.trim()) next.service = 'Please enter a service.';
     if (!form.message.trim()) next.message = 'Please enter a message.';
     return next;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const validation = validate();
     setErrors(validation);
+
     if (Object.keys(validation).length > 0) return;
 
-    // No backend wired up yet - simulate a successful submission.
+    const whatsappNumber = "919847221919";
+
+    const text = `KOLONIA POLONIA HAIR STUDIO
+
+NEW ENQUIRY
+
+----------------------------------------
+
+Name
+${form.name}
+
+Phone
+${form.phone}
+
+Email
+${form.email || "Not Provided"}
+
+Service Required
+${form.service}
+
+Message
+${form.message || "No Message"}
+
+----------------------------------------
+
+Submitted From
+Website Contact Form`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+
+    window.open(url, "_blank");
+
     setSubmitted(true);
     setForm(INITIAL_FORM);
-    setTimeout(() => setSubmitted(false), 5000);
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 5000);
   };
 
   return (
     <>
       <SEO
-        title="Contact Us"
-        description="Get in touch with Kolonia Polonia Hair Studio in Alappuzha, Kerala. Call, WhatsApp or visit one of our three branches to book your appointment."
-        keywords="contact salon Alappuzha, book appointment salon, Kolonia Polonia phone number"
+        title="Contact Kolonia Polonia Hair Studio | Book Your Salon Appointment in Alappuzha"
+        description="Contact Kolonia Polonia Hair Studio in Alappuzha, Kerala to book your next salon appointment. Reach us by phone, WhatsApp or visit any of our branches for premium hair styling, beauty, bridal makeup, spa and grooming services for men and women."
+        keywords="Kolonia Polonia Hair Studio contact, contact salon Alappuzha, salon phone number Alappuzha, book salon appointment Alappuzha, beauty salon contact Kerala, hair salon Alappuzha, WhatsApp salon booking, bridal makeup appointment Alappuzha, spa booking Alappuzha, luxury salon Kerala, unisex salon Alappuzha"
         path="/contact"
       />
 
@@ -139,13 +178,15 @@ export default function Contact() {
               </div>
 
               <div className="contact-form__field">
-                <label htmlFor="subject" className="sr-only">Subject</label>
-                <input id="subject" name="subject" type="text" placeholder="Subject" value={form.subject} onChange={handleChange} />
+                <label htmlFor="service" className="sr-only">Service</label>
+                <input id="service" name="service" type="text" placeholder="Service" value={form.service} required onChange={handleChange} aria-invalid={!!errors.service} />
+                {errors.service && <span className="contact-form__error">{errors.service}</span>}
+
               </div>
 
               <div className="contact-form__field">
                 <label htmlFor="message" className="sr-only">Your Message</label>
-                <textarea id="message" name="message" rows={5} placeholder="Your Message" value={form.message} onChange={handleChange} aria-invalid={!!errors.message} />
+                <textarea id="message" name="message" rows={5} placeholder="Your Message" value={form.message} required onChange={handleChange} aria-invalid={!!errors.message} />
                 {errors.message && <span className="contact-form__error">{errors.message}</span>}
               </div>
 
@@ -172,7 +213,7 @@ export default function Contact() {
                   <span className="contact-info-list__icon"><MapPin size={17} strokeWidth={1.8} /></span>
                   <div>
                     <strong>Address</strong>
-                    <p>Near Dummy Road, Alappuzha, Kerala &ndash; 688001</p>
+                    <p>Near Hospital Jn. Municipal Stadium Ward, Vellakkinar, Alappuzha, Kerala &ndash; 688001</p>
                   </div>
                 </li>
                 <li>
@@ -186,14 +227,14 @@ export default function Contact() {
                   <span className="contact-info-list__icon"><Mail size={17} strokeWidth={1.8} /></span>
                   <div>
                     <strong>Email</strong>
-                    <p>info@koloniapolonia.com</p>
+                    <p>reachbijupolonia@gmail.com</p>
                   </div>
                 </li>
                 <li>
                   <span className="contact-info-list__icon"><Clock size={17} strokeWidth={1.8} /></span>
                   <div>
                     <strong>Working Hours</strong>
-                    <p>10:00 AM &ndash; 8:00 PM (All Days Open)</p>
+                    <p>09:00 AM &ndash; 09:00 PM (All Days Open)</p>
                   </div>
                 </li>
               </ul>

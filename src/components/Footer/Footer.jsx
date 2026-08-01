@@ -90,7 +90,7 @@ export default function Footer() {
           <ul className="footer__contact">
             <li>
               <MapPin size={16} strokeWidth={2} />
-              <span>Near Dummy Road, Alappuzha, Kerala &ndash; 688001</span>
+              <span>Near Hospital Jn. Municipal Stadium Ward, Vellakkinar, Alappuzha, Kerala &ndash; 688001</span>
             </li>
             <li>
               <Phone size={16} strokeWidth={2} />
@@ -98,11 +98,11 @@ export default function Footer() {
             </li>
             <li>
               <Mail size={16} strokeWidth={2} />
-              <span>info@koloniapolonia.com</span>
+              <span>reachbijupolonia@gmail.com</span>
             </li>
             <li>
               <Clock size={16} strokeWidth={2} />
-              <span>10:00 AM - 8:00 PM (All Days Open)</span>
+              <span>09:00 AM - 09:00 PM (All Days Open)</span>
             </li>
           </ul>
         </div>

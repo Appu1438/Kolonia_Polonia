@@ -67,7 +67,7 @@ export default function Header() {
             </span>
             <span className="topbar__item">
               <Clock size={13} strokeWidth={2} />
-              10:00 AM - 8:00 PM
+              09:00 AM - 09:00 PM
             </span>
             <span className="topbar__socials">
               <a href="https://www.facebook.com/share/1C76qpmbNR/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -174,7 +174,7 @@ export default function Header() {
                   <Phone size={14} strokeWidth={2} /> 98472 21919
                 </p>
                 <p>
-                  <Clock size={14} strokeWidth={2} /> 10:00 AM - 8:00 PM
+                  <Clock size={14} strokeWidth={2} /> 09:00 AM - 09:00 PM
                 </p>
               </div>
             </motion.div>
