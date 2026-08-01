@@ -161,30 +161,6 @@
   .about-story__values { position: static; margin-top: 20px; }
 }
 
-/* BRANCHES */
-.about-branches__head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 48px;
-}
-
-.about-branches__head h2 { font-size: clamp(1.8rem, 2.8vw, 2.3rem); margin-bottom: 10px; }
-
-.about-branches__head p { max-width: 420px; font-size: 14.5px; }
-
-.about-branches__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-@media (max-width: 860px) {
-  .about-branches__list { grid-template-columns: 1fr; }
-}
-
 /* CTA */
 .about-cta {
   background: var(--color-black);
@@ -218,3 +194,204 @@
 }
 
 .about-cta__icons svg { color: var(--color-red); }
+
+/* MISSION & VISION */
+.about-mission {
+  background: var(--color-gray-50);
+}
+
+.about-mission__head {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 48px;
+}
+
+.about-mission__head h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.3rem);
+}
+
+.about-mission__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.about-mission__card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+  padding: 38px 34px;
+  transition: border-color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.about-mission__card:hover {
+  border-color: var(--color-red);
+  transform: translateY(-4px);
+}
+
+.about-mission__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray-100);
+  color: var(--color-red);
+  margin-bottom: 20px;
+}
+
+.about-mission__card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.about-mission__card p {
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .about-mission__grid { grid-template-columns: 1fr; }
+}
+
+/* CORE VALUES */
+.about-values__head {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 48px;
+}
+
+.about-values__head h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.3rem);
+  margin-bottom: 12px;
+}
+
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.about-values__card {
+  padding: 34px 28px;
+  border: 1px solid var(--color-gray-100);
+  transition: border-color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.about-values__card:hover {
+  border-color: var(--color-red);
+  transform: translateY(-4px);
+}
+
+.about-values__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-black);
+  color: var(--color-white);
+  margin-bottom: 18px;
+}
+
+.about-values__card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.about-values__card p {
+  font-size: 13.5px;
+}
+
+@media (max-width: 960px) {
+  .about-values__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .about-values__grid { grid-template-columns: 1fr; }
+}
+
+/* JOURNEY */
+.about-journey {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.about-journey__head {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 60px;
+}
+
+.about-journey__head h2 {
+  color: var(--color-white);
+  font-size: clamp(1.8rem, 2.8vw, 2.3rem);
+}
+
+.about-journey__timeline {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.about-journey__timeline::before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.about-journey__step {
+  display: flex;
+  gap: 24px;
+  padding: 22px 0;
+}
+
+.about-journey__icon {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-black);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-journey__year {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-red);
+  margin-bottom: 6px;
+}
+
+.about-journey__body h3 {
+  color: var(--color-white);
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.about-journey__body p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13.5px;
+  max-width: 480px;
+}
+
+@media (max-width: 560px) {
+  .about-journey__timeline::before { left: 19px; }
+  .about-journey__icon { width: 40px; height: 40px; }
+  .about-journey__step { gap: 16px; }
+}

@@ -1,6 +1,27 @@
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Calendar, Scissors, Users, Trophy, Star, Heart, ShieldCheck, Sparkles, MapPin, CalendarCheck, Award } from 'lucide-react';
+import {
+  Calendar,
+  Scissors,
+  Users,
+  Trophy,
+  Star,
+  Heart,
+  ShieldCheck,
+  Sparkles,
+  CalendarCheck,
+  Award,
+  Target,
+  Compass,
+  Gem,
+  ThumbsUp,
+  Lightbulb,
+  HandHeart,
+  Milestone,
+  Rocket,
+  Building2,
+  PartyPopper,
+} from 'lucide-react';
 import SEO from '../../components/SEO/SEO';
 import Reveal, { RevealStagger, RevealStaggerItem } from '../../components/Reveal/Reveal';
 import { IMG } from '../../assets/images/unsplash';
@@ -8,8 +29,8 @@ import './About.css';
 
 const STATS = [
   { icon: Scissors, value: '15+', label: 'Years of Experience' },
-  { icon: Users, value: '5000+', label: 'Happy Clients' },
-  { icon: Trophy, value: '20+', label: 'Expert Stylists' },
+  { icon: Users, value: '1 Lakh+', label: 'Happy Clients' },
+  { icon: Trophy, value: '30+', label: 'Expert Stylists' },
   { icon: Star, value: '', label: 'Premium Products & Top Brands' },
 ];
 
@@ -20,10 +41,34 @@ const VALUES = [
   { icon: Star, label: 'Customer Satisfaction First' },
 ];
 
-const BRANCHES = [
-  { tag: 'Main Branch', name: 'Alappuzha', address: 'Near Dummy Road, Alappuzha, Kerala \u2013 688001', image: IMG.branchInterior1 },
-  { tag: 'Branch 2', name: 'Alappuzha North', address: 'Near Dummy Junction, Alappuzha, Kerala \u2013 688002', image: IMG.branchInterior2 },
-  { tag: 'Branch 3', name: 'Cherthala', address: 'Near Dummy Bypass, Cherthala, Kerala \u2013 688524', image: IMG.branchInterior3 },
+const MISSION_VISION = [
+  {
+    icon: Target,
+    label: 'Our Mission',
+    text: 'To enhance natural beauty and confidence through personalized, expert care delivered in a warm, hygienic and welcoming environment \u2014 for every client, every visit.',
+  },
+  {
+    icon: Compass,
+    label: 'Our Vision',
+    text: 'To become Kerala\u2019s most trusted name in premium hair, beauty and wellness, known as much for our integrity and hygiene as for our craft.',
+  },
+];
+
+const CORE_VALUES = [
+  { icon: Gem, title: 'Excellence in Craft', desc: 'Every cut, color and style is treated as a signature piece of work, not a routine service.' },
+  { icon: ShieldCheck, title: 'Hygiene & Safety', desc: 'Sterilized tools, premium products and safe practices at every single station.' },
+  { icon: Lightbulb, title: 'Creativity & Trend', desc: 'Our stylists train continuously to bring the latest techniques home to Alappuzha.' },
+  { icon: HandHeart, title: 'Client-First Care', desc: 'We listen first. Every service is personalized to your face, hair and lifestyle.' },
+  { icon: ThumbsUp, title: 'Integrity & Trust', desc: 'Honest recommendations over upselling \u2014 we only suggest what actually suits you.' },
+  { icon: Sparkles, title: 'Continuous Learning', desc: 'Regular workshops and certifications keep our team ahead of the curve.' },
+];
+
+const JOURNEY = [
+  { year: '2009', icon: Milestone, title: 'The First Chair', desc: 'Biju Polonia begins his journey as an independent stylist, building a name on skill and trust.' },
+  { year: '2015', icon: Building2, title: 'Kolonia Polonia Opens', desc: 'Our main Alappuzha studio opens its doors, bringing a premium salon experience to the city.' },
+  { year: '2019', icon: Rocket, title: 'Growing Family', desc: 'The Alappuzha North branch opens to serve a growing community of loyal clients.' },
+  { year: '2022', icon: PartyPopper, title: 'Third Home', desc: 'Cherthala becomes our third branch, extending the Kolonia Polonia experience further.' },
+  { year: 'Today', icon: Trophy, title: '1 Lakh+ Happy Clients', desc: 'Three branches, twenty-plus expert stylists, and a legacy still being written.' },
 ];
 
 const CTA_ICONS = [
@@ -152,36 +197,82 @@ export default function About() {
         </div>
       </section>
 
-      {/* BRANCHES */}
-      <section className="section-sm about-branches">
+      {/* MISSION & VISION */}
+      <section className="section-sm about-mission">
         <div className="container">
-          <Reveal className="about-branches__head">
-            <span className="eyebrow">Our Branches</span>
-            <h2>Closer To You</h2>
-            <p>
-              We are proud to serve you from multiple locations in and around Alappuzha with the
-              same luxury experience.
-            </p>
+          <Reveal className="about-mission__head">
+            <span className="eyebrow">What Drives Us</span>
+            <h2>Mission &amp; Vision</h2>
           </Reveal>
 
-          <RevealStagger className="about-branches__list" staggerDelay={0.1}>
-            {BRANCHES.map((branch) => (
-              <RevealStaggerItem key={branch.name} className="branch-card">
-                <div className="branch-card__img">
-                  <img src={branch.image} alt={`${branch.name} salon branch interior`} loading="lazy" />
-                  <span className="branch-card__tag">{branch.tag}</span>
-                </div>
-                <div className="branch-card__body">
-                  <h3>
-                    <MapPin size={16} strokeWidth={2} /> {branch.name}
-                  </h3>
-                  <p>{branch.address}</p>
-                </div>
+          <RevealStagger className="about-mission__grid" staggerDelay={0.12}>
+            {MISSION_VISION.map((item) => (
+              <RevealStaggerItem key={item.label} className="about-mission__card">
+                <span className="about-mission__icon">
+                  <item.icon size={24} strokeWidth={1.5} />
+                </span>
+                <h3>{item.label}</h3>
+                <p>{item.text}</p>
               </RevealStaggerItem>
             ))}
           </RevealStagger>
         </div>
       </section>
+
+      {/* JOURNEY */}
+      <section className="section about-journey">
+        <div className="container">
+          <Reveal className="about-journey__head">
+            <span className="eyebrow eyebrow--light">Our Journey</span>
+            <h2>From One Chair To Three Branches</h2>
+          </Reveal>
+
+          <ul className="about-journey__timeline">
+            {JOURNEY.map((step, i) => (
+              <Reveal
+                as="li"
+                key={step.year}
+                direction={i % 2 === 0 ? 'left' : 'right'}
+                delay={i * 0.05}
+                className="about-journey__step"
+              >
+                <span className="about-journey__icon">
+                  <step.icon size={18} strokeWidth={1.6} />
+                </span>
+                <div className="about-journey__body">
+                  <span className="about-journey__year">{step.year}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* CORE VALUES */}
+      <section className="section-sm about-values">
+        <div className="container">
+          <Reveal className="about-values__head">
+            <span className="eyebrow">What We Stand For</span>
+            <h2>Our Core Values</h2>
+            <p>The principles that guide every service, every stylist, every visit.</p>
+          </Reveal>
+
+          <RevealStagger className="about-values__grid" staggerDelay={0.08}>
+            {CORE_VALUES.map((item) => (
+              <RevealStaggerItem key={item.title} className="about-values__card">
+                <span className="about-values__icon">
+                  <item.icon size={22} strokeWidth={1.5} />
+                </span>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </RevealStaggerItem>
+            ))}
+          </RevealStagger>
+        </div>
+      </section>
+
 
       {/* CTA */}
       <section className="about-cta">

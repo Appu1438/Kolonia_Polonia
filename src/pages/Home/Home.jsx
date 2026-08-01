@@ -20,9 +20,9 @@ import './Home.css';
 
 const STATS = [
   { icon: Award, value: '15+', label: 'Years of Excellence' },
-  { icon: Heart, value: '5000+', label: 'Happy Clients' },
+  { icon: Heart, value: '1 Lakh+', label: 'Happy Clients' },
   { icon: MapPin, value: '3', label: 'Branches' },
-  { icon: Users, value: '20+', label: 'Expert Stylists' },
+  { icon: Users, value: '30+', label: 'Expert Stylists' },
 ];
 
 const SERVICES = [
