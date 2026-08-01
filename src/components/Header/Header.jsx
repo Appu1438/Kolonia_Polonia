@@ -164,7 +164,7 @@ export default function Header() {
                 ))}
               </ul>
 
-              <NavLink to="/contact" className="btn btn-white" onClick={() => setMenuOpen(false)}>
+              <NavLink to="/contact" className="btn btn-white mobile-menu__cta" onClick={() => setMenuOpen(false)}>
                 <Calendar size={15} strokeWidth={2} />
                 Book Appointment
               </NavLink>
