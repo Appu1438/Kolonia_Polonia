@@ -65,55 +65,63 @@ export default function Home() {
       {/* HERO */}
       <section className="home-hero">
         <div className="home-hero__media">
-          <img src={IMG.heroHome} alt="Kolonia Polonia luxury salon interior" />
+          <img
+            src={IMG.heroHome}
+            alt="Kolonia Polonia Luxury Salon Interior"
+          />
           <div className="home-hero__overlay" />
         </div>
 
-        <div className="container home-hero__content">
-          <motion.span
-            className="home-hero__kicker"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          >
-            Style That Defines You
-          </motion.span>
+        <div className="container home-hero__wrapper">
+          <div className="home-hero__content">
+            <motion.span
+              className="home-hero__kicker"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+            >
+              Style That Defines You
+            </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.25 }}
-          >
-            Look Beautiful.
-            <br />
-            Feel Powerful.
-            <br />
-            <span className="home-hero__script">Everyday.</span>
-          </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.25 }}
+            >
+              Look Beautiful.
+              <br />
+              Feel Powerful.
+              <br />
+              <span className="home-hero__script">Everyday.</span>
+            </motion.h1>
 
-          <motion.p
-            className="home-hero__desc"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Kolonia Polonia Hair Studio is where expertise meets elegance. Men &amp; Women &mdash;
-            all beauty, grooming &amp; wellness services under one roof.
-          </motion.p>
+            <motion.p
+              className="home-hero__desc"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Kolonia Polonia Hair Studio is where expertise meets elegance.
+              Men &amp; Women — all beauty, grooming and wellness services
+              under one roof.
+            </motion.p>
 
-          <motion.div
-            className="home-hero__actions"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.55 }}
-          >
-            <NavLink to="/services" className="btn btn-white">
-              Explore Services <ArrowRight size={15} />
-            </NavLink>
-            <NavLink to="/contact" className="btn btn-outline-light">
-              <Calendar size={15} /> Book Appointment
-            </NavLink>
-          </motion.div>
+            <motion.div
+              className="home-hero__actions"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.55 }}
+            >
+              <NavLink to="/services" className="btn btn-white">
+                Explore Services <ArrowRight size={15} />
+              </NavLink>
+
+              <NavLink to="/contact" className="btn btn-outline-light">
+                <Calendar size={15} />
+                Book Appointment
+              </NavLink>
+            </motion.div>
+          </div>
         </div>
 
         <motion.div
@@ -122,9 +130,18 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.7 }}
         >
-          <span className="home-hero__badge-eyebrow">Expert Care By</span>
-          <span className="home-hero__badge-name">Biju Polonia</span>
-          <p>Highly sought-after hairstylist known for style, perfection &amp; trust.</p>
+          <span className="home-hero__badge-eyebrow">
+            Expert Care By
+          </span>
+
+          <span className="home-hero__badge-name">
+            Biju Polonia
+          </span>
+
+          <p>
+            Highly sought-after hairstylist known for style,
+            perfection and trust.
+          </p>
         </motion.div>
       </section>
 

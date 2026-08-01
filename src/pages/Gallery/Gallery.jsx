@@ -66,6 +66,41 @@ export default function Gallery() {
       {/* HERO */}
       <section className="page-hero">
         <div className="page-hero__media">
+          <img
+            src={IMG.heroGallery}
+            alt="Interior of Kolonia Polonia Hair Studio"
+          />
+          <div className="page-hero__overlay" />
+        </div>
+
+        <div className="container page-hero__wrapper">
+          <div className="page-hero__content">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="eyebrow eyebrow--light">Our Gallery</span>
+
+
+              <h1>Transformations That Speak For Themselves.</h1>
+
+
+              <p>
+                Real people. Real styles. Real confidence. Explore our work and see the Kolonia
+                Polonia difference.
+              </p>
+
+              {/* <span className="page-hero__sign">
+                Biju Polonia
+              </span> */}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="page-hero">
+        <div className="page-hero__media">
           <img src={IMG.heroGallery} alt="Kolonia Polonia salon gallery interior" />
           <div className="page-hero__overlay" />
         </div>
@@ -77,7 +112,7 @@ export default function Gallery() {
             Polonia difference.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* FILTER BAR */}
       <div className="gallery-filterbar">

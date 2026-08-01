@@ -4,6 +4,8 @@ import SEO from '../../components/SEO/SEO';
 import Reveal, { RevealStagger, RevealStaggerItem } from '../../components/Reveal/Reveal';
 import { IMG } from '../../assets/images/unsplash';
 import './Services.css';
+import { motion } from 'framer-motion';
+
 
 const CATEGORIES = [
   { icon: Scissors, label: 'Hair Services' },
@@ -56,6 +58,40 @@ export default function Services() {
       {/* HERO */}
       <section className="page-hero">
         <div className="page-hero__media">
+          <img
+            src={IMG.heroServices}
+            alt="Interior of Kolonia Polonia Hair Studio"
+          />
+          <div className="page-hero__overlay" />
+        </div>
+
+        <div className="container page-hero__wrapper">
+          <div className="page-hero__content">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="eyebrow eyebrow--light">Services</span>
+
+
+              <h1>Beauty. Crafted For You.</h1>
+
+              <p>
+                From expert haircuts to luxurious spa therapies, we offer complete beauty solutions
+                for men &amp; women under one roof.
+              </p>
+
+              {/* <span className="page-hero__sign">
+                Biju Polonia
+              </span> */}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="page-hero">
+        <div className="page-hero__media">
           <img src={IMG.heroServices} alt="Kolonia Polonia salon service area" />
           <div className="page-hero__overlay" />
         </div>
@@ -67,7 +103,7 @@ export default function Services() {
             for men &amp; women under one roof.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* CATEGORY NAV */}
       <div className="services-catnav">

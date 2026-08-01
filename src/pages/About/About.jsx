@@ -45,19 +45,39 @@ export default function About() {
       {/* HERO */}
       <section className="page-hero">
         <div className="page-hero__media">
-          <img src={IMG.heroAbout} alt="Interior of Kolonia Polonia Hair Studio" />
+          <img
+            src={IMG.heroAbout}
+            alt="Interior of Kolonia Polonia Hair Studio"
+          />
           <div className="page-hero__overlay" />
         </div>
-        <div className="container page-hero__content">
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="eyebrow eyebrow--light">About Us</span>
-            <h1>Passion. Precision. Perfection.</h1>
-            <p>
-              Kolonia Polonia Hair Studio is more than just a salon. It&rsquo;s an experience crafted
-              with passion, driven by expertise and delivered with love.
-            </p>
-            <span className="page-hero__sign">Biju Polonia</span>
-          </motion.div>
+
+        <div className="container page-hero__wrapper">
+          <div className="page-hero__content">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="eyebrow eyebrow--light">
+                About Us
+              </span>
+
+              <h1>
+                Passion. Precision. Perfection.
+              </h1>
+
+              <p>
+                Kolonia Polonia Hair Studio is more than just a salon.
+                It's an experience crafted with passion, driven by
+                expertise and delivered with love.
+              </p>
+
+              {/* <span className="page-hero__sign">
+                Biju Polonia
+              </span> */}
+            </motion.div>
+          </div>
         </div>
       </section>
 

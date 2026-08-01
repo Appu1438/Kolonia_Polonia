@@ -5,6 +5,7 @@ import SEO from '../../components/SEO/SEO';
 import Reveal, { RevealStagger, RevealStaggerItem } from '../../components/Reveal/Reveal';
 import { IMG } from '../../assets/images/unsplash';
 import './Contact.css';
+import { motion } from 'framer-motion';
 
 const BRANCHES = [
   { tag: 'Main Branch', name: 'Alappuzha', address: 'Near Dummy Road, Alappuzha, Kerala \u2013 688001', phone: '98472 21919', image: IMG.branchInterior1 },
@@ -60,7 +61,38 @@ export default function Contact() {
       />
 
       {/* HERO */}
+
       <section className="page-hero">
+        <div className="page-hero__media">
+          <img
+            src={IMG.heroContact}
+            alt="Interior of Kolonia Polonia Hair Studio"
+          />
+          <div className="page-hero__overlay" />
+        </div>
+
+        <div className="container page-hero__wrapper">
+          <div className="page-hero__content">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="eyebrow eyebrow--light">Contact Us</span>
+              <h1>We Would Love To Hear From You.</h1>
+              <p>
+                Have a question, need an appointment, or want to know more about our services?
+                We&rsquo;re here for you!
+              </p>
+              {/* <span className="page-hero__sign">
+                Biju Polonia
+              </span> */}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="page-hero">
         <div className="page-hero__media">
           <img src={IMG.heroContact} alt="Kolonia Polonia Hair Studio reception area" />
           <div className="page-hero__overlay" />
@@ -73,7 +105,7 @@ export default function Contact() {
             We&rsquo;re here for you!
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* FORM + INFO */}
       <section className="section-sm contact-main">
