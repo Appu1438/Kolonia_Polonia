@@ -70,10 +70,10 @@ export default function Header() {
               10:00 AM - 8:00 PM
             </span>
             <span className="topbar__socials">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1C76qpmbNR/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FacebookIcon size={14} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/kolonia_polonia_alleppy?igsh=MW04bXEweGVhaGhxZA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <InstagramIcon size={14} />
               </a>
               <a href="https://wa.me/919847221919" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">

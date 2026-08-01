@@ -223,7 +223,7 @@ export default function Contact() {
           <h3>Find Us Here</h3>
           <p>We are conveniently located in the heart of Alappuzha.</p>
           <a
-            href="https://maps.google.com/?q=Alappuzha,Kerala"
+            href="https://maps.app.goo.gl/6RjtFFGxjoUxqbWs6"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline-light contact-map__directions"
@@ -234,7 +234,7 @@ export default function Contact() {
         <div className="contact-map__frame" role="img" aria-label="Map placeholder showing Alappuzha, Kerala location">
           <iframe
             title="Kolonia Polonia Hair Studio location map"
-            src="https://www.google.com/maps?q=Alappuzha,Kerala&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.2000089513995!2d76.33471717450328!3d9.49132598158185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0884f38731b891%3A0x419c7a60321298c9!2sPolonia%20Parlour!5e0!3m2!1sen!2sin!4v1785569025737!5m2!1sen!2sin"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

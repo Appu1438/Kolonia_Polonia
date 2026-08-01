@@ -46,16 +46,16 @@ export default function Footer() {
             relaxation in Alappuzha.
           </p>
           <div className="footer__socials">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/1C76qpmbNR/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FacebookIcon size={16} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://www.instagram.com/kolonia_polonia_alleppy?igsh=MW04bXEweGVhaGhxZA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <InstagramIcon size={16} />
             </a>
             <a href="https://wa.me/919847221919" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <MessageCircle size={16} strokeWidth={2} />
             </a>
-            <a href="#location" aria-label="Location">
+            <a href="https://maps.app.goo.gl/6RjtFFGxjoUxqbWs6" aria-label="Location">
               <MapPin size={16} strokeWidth={2} />
             </a>
           </div>

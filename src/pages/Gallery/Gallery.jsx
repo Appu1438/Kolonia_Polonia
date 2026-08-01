@@ -206,7 +206,7 @@ export default function Gallery() {
             <p>Book your appointment today and let our experts bring out the best in you.</p>
           </Reveal>
           <Reveal direction="right">
-            <NavLink to="/contact" className="btn btn-primary">
+            <NavLink to="/contact" className="btn btn-white">
               <Calendar size={15} /> Book Appointment
             </NavLink>
           </Reveal>
