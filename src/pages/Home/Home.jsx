@@ -43,15 +43,26 @@ const SERVICES = [
   { title: 'Men\u2019s Grooming', tag: 'Complete grooming for the modern man', image: IMG.haircutMen },
 ];
 
+
+import loreal from "../../assets/images/brands/loreal.png";
+import matrix from "../../assets/images/brands/matrix.png";
+import kerastase from "../../assets/images/brands/kerastase.png";
+import redken from "../../assets/images/brands/redken.png";
+import wella from "../../assets/images/brands/wella.png";
+import olaplex from "../../assets/images/brands/olaplex.png";
+import schwarzkopf from "../../assets/images/brands/schwarzkopf.png";
+import brillare from "../../assets/images/brands/brillare.png";
+
+
 const BRANDS = [
-  'Brillare',
-  'L\u2019Or\u00e9al',
-  'Matrix',
-  'K\u00e9rastase',
-  'Redken',
-  'Wella Professionals',
-  'Olaplex',
-  'Schwarzkopf Professional',
+  { name: 'Brillare', src: brillare },
+  { name: 'L\u2019Or\u00e9al', src: loreal },
+  { name: 'Matrix', src: matrix },
+  { name: 'K\u00e9rastase', src: kerastase },
+  { name: 'Redken', src: redken },
+  { name: 'Wella Professionals', src: wella },
+  { name: 'Olaplex', src: olaplex },
+  { name: 'Schwarzkopf Professional', src: schwarzkopf },
 ];
 
 const BRANCHES = [
@@ -396,17 +407,29 @@ export default function Home() {
         <div className="home-marquee__track" role="list" aria-label="Professional brands used in-studio">
           <ul className="home-marquee__row" aria-hidden="true">
             {BRANDS.map((brand) => (
-              <li key={`a-${brand}`} className="home-marquee__item">
-                <span>{brand}</span>
-                <Gem size={12} strokeWidth={1.6} className="home-marquee__dot" />
+              <li key={`a-${brand.name}`} className="home-marquee__item">
+                <img
+                  src={brand.src}
+                  alt={brand.name}
+                  className="home-marquee__logo"
+                  loading="lazy"
+                  draggable={false}
+                />
+                <Gem size={20} strokeWidth={1.6} className="home-marquee__dot" />
               </li>
             ))}
           </ul>
           <ul className="home-marquee__row" aria-hidden="true">
             {BRANDS.map((brand) => (
-              <li key={`b-${brand}`} className="home-marquee__item">
-                <span>{brand}</span>
-                <Gem size={12} strokeWidth={1.6} className="home-marquee__dot" />
+              <li key={`b-${brand.name}`} className="home-marquee__item">
+                <img
+                  src={brand.src}
+                  alt={brand.name}
+                  className="home-marquee__logo"
+                  loading="lazy"
+                  draggable={false}
+                />
+                <Gem size={20} strokeWidth={1.6} className="home-marquee__dot" />
               </li>
             ))}
           </ul>

@@ -417,7 +417,7 @@ HERO===========================================*/
    BRANDS MARQUEE
 =========================================== */
 .home-marquee {
-  padding: 90px 0 90px;
+  padding: 75px 0 75px;
   background: var(--color-gray-50);
   overflow: hidden;
 }
@@ -461,21 +461,25 @@ HERO===========================================*/
   white-space: nowrap;
 }
 
-.home-marquee__item span {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--color-gray-300);
-  transition: color 0.4s var(--ease);
+/* Logos ship in a mix of aspect ratios — fix the box, let the mark float
+   inside it via object-fit so nothing stretches or overlaps its neighbor. */
+.home-marquee__logo {
+  height: 150px;
+  width: 200px;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: filter 0.4s var(--ease), opacity 0.4s var(--ease);
 }
 
-.home-marquee__track:hover .home-marquee__item span {
-  color: var(--color-gray-500);
+.home-marquee__track:hover .home-marquee__logo {
+  opacity: 0.65;
 }
 
-.home-marquee__item:hover span {
-  color: var(--color-black) !important;
+.home-marquee__item:hover .home-marquee__logo {
+  filter: grayscale(0);
+  opacity: 1 !important;
 }
 
 .home-marquee__dot {
@@ -512,6 +516,11 @@ HERO===========================================*/
   .home-marquee__item {
     padding: 0 22px;
     gap: 18px;
+  }
+
+  .home-marquee__logo {
+    height: 150px;
+    width: 200px;
   }
 }
 
@@ -762,12 +771,14 @@ HERO===========================================*/
   }
 
   .home-testimonials__viewport {
-    padding: 0 8px;
+    padding: 0 10px;
   }
 
   .home-testimonials__arrow {
     width: 38px;
     height: 38px;
+    display: none;
+
   }
 
   .testimonial-card {

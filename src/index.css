@@ -49,9 +49,30 @@ body::before {
   pointer-events: none;
   z-index: 0;
 
-  background: url("../src/assets/images/bg2.png") center/700px repeat;
-  color: var(--color-black);
-  opacity: 0.100;
+  background-image: url("../src/assets/images/background/bg.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 700px;
+
+  opacity: 0.1;
+}
+
+@media (max-width: 992px) {
+  body::before {
+    background-size: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  body::before {
+    background-size: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  body::before {
+    background-size: 320px;
+  }
 }
 
 img {
